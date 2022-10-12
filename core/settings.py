@@ -35,13 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     'widget_tweaks',                            # uses 'django-widget-tweaks' app
     'crispy_forms',                             # uses 'django-crispy-forms' app
-    'login_required',                           # uses 'django-login-required-middleware' app
-
+                    # uses 'django-login-required-middleware' app
+    #'login_required',
     'homepage.apps.HomepageConfig',
     'inventory.apps.InventoryConfig',
     'transactions.apps.TransactionsConfig',
@@ -56,8 +57,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+'whitenoise.middleware.WhiteNoiseMiddleware',
 
-    'login_required.middleware.LoginRequiredMiddleware',    # middleware used for global login
+
+    #'login_required.middleware.LoginRequiredMiddleware',    # middleware used for global login
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -78,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+
 
 
 # Database

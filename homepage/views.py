@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from inventory.models import Stock
-from transactions.models import SaleBill, PurchaseBill
+
+from transactions.models import SaleBill, PurchaseBill,SaleItem
 
 
 class HomeView(View):
@@ -25,3 +26,10 @@ class HomeView(View):
 
 class AboutView(TemplateView):
     template_name = "about.html"
+
+def ListView(request):
+    stock = SaleItem.objects.all().filter()
+    name = SaleBill.objects.all().filter()
+    mylist=zip(stock,name)
+    job_view = {'mylist':mylist}
+    return render(request, 'viewdetails.html', job_view )
