@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<div class="card-body table-responsive p-0">
+                                      <table class="table table-hover text-nowrap">
+                                        <thead>
+
+                                          <tr>
+                                            <th>Job Title</th>
+                                            <th>Date</th>
+                                            <th>Place Of Job</th>
+                                            <th>Job Description</th>
+
+
+                                          </tr>
+
+                                        </thead>
+                                        {% for i,j in job_view %}
+                                          <tr>
+                                            <td> {{i.Stock}}</td>
+                                            <td> {{i.Name}}</td>
+                                            <td>{{s.jbplace}}</td>
+                                            <td>{{s.jbdes}}</td>
+                                            <td>{{s.jbname}}</td>
+                                            <td>{{s.jbno}}</td>
+                                          {% endfor %}
+
+                                          </tr>
+
+
+                                      </table>
+                                    </div>
+</body>
+</html>
