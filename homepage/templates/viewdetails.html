@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<style>
+  table{
+  border: 2px solid goldenrod;
+  }
+  th{
+  border: 2px solid goldenrod;
+  }
+  td{
+border: 2px solid goldenrod;
+  }
+  tr{
+  border=2px solid black;
+  }
+</style>
 </head>
 <body>
+
 <div class="card-body table-responsive p-0">
+                                     <center>
+
                                       <table class="table table-hover text-nowrap">
                                         <thead>
 
                                           <tr>
-                                            <th>Job Title</th>
-                                            <th>Date</th>
-                                            <th>Place Of Job</th>
-                                            <th>Job Description</th>
+                                            <th>ITEM</th>
+                                            <th>NAME</th>
+                                            <th>PHONE</th>
+                                            <th>EMAIL</th>
+
 
 
                                           </tr>
 
                                         </thead>
-                                        {% for i,j in job_view %}
+                                        {% for i,j in mylist %}
                                           <tr>
-                                            <td> {{i.Stock}}</td>
-                                            <td> {{i.Name}}</td>
-                                            <td>{{s.jbplace}}</td>
-                                            <td>{{s.jbdes}}</td>
-                                            <td>{{s.jbname}}</td>
-                                            <td>{{s.jbno}}</td>
+                                            <td> {{i.stock}}</td>
+                                            <td> {{j.name}}</td>
+                                            <td>{{j.phone}}</td>
+                                            <td>{{j.email}}</td>
+
                                           {% endfor %}
 
                                           </tr>
 
 
                                       </table>
+                                       </center>
                                     </div>
 </body>
 </html>

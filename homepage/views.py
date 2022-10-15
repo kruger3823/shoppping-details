@@ -30,6 +30,8 @@ class AboutView(TemplateView):
 def ListView(request):
     stock = SaleItem.objects.all().filter()
     name = SaleBill.objects.all().filter()
+    print(stock)
+    print(name)
     mylist=zip(stock,name)
     job_view = {'mylist':mylist}
-    return render(request, 'viewdetails.html', job_view )
+    return render(request, 'viewdetails.html', {'mylist':mylist})
